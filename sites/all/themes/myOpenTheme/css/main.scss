@@ -1,0 +1,51 @@
+$primary-color: #333;
+$parallax-color: #fff;
+$back-alpha: rgba(50,50,50,.5);
+
+* {
+    box-sizing: border-box;
+}
+body {
+  color: $primary-color;
+  margin: 0;
+} 
+header {
+    position: fixed;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    z-index: 2;
+    background: #fff;
+    width: 100%;
+    padding: 0 5em;
+}
+
+/*Content*/
+
+#logo {
+    float: left;
+}
+#main-menu {
+    float: right;
+}
+.intro {
+	position: relative;
+	padding: 10em 0;
+    background: url(../images/intro-bg.jpg) center no-repeat fixed;
+
+ 	h2 {
+		color:$parallax-color;
+	}	
+
+		&:after {
+			content: '';
+		    background: $back-alpha;
+		    display: block;
+		    height: 100%;
+		    left: 0;
+		    position: absolute;
+		    top: 0;
+		    width: 100%;
+		    z-index: 1;
+		}
+}
